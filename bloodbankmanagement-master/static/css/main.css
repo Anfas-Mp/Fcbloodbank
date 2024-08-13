@@ -192,6 +192,7 @@ hr,
 fieldset, legend {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto Mono', monospace;
 }
 
 /**
@@ -234,13 +235,14 @@ button {
 }
 
 body {
-  font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   font-size: 14px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
+  font-family: 'Roboto Mono', monospace;
 }
 
 h1 {

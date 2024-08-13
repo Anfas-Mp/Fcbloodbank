@@ -1,44 +1,124 @@
 {% load static %}
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <style>
-        .xyz{
-          margin-bottom: 0px;
-          background-image: url('{% static "image/blood.jpg" %}');
-          background-size: cover;
-          width: 100%;
-          background-repeat: no-repeat;
-        }
-      </style>
-      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Blood Bank</title>
+    <!-- Favicon -->
+    <link href="{% static 'image/blood_logo.jpeg'%}" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
 </head>
-
-
 <body>
-  {% include "blood/navbar.html" %}
-<br>
-<section id="section-jumbotron" style="margin-bottom: 0px;" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center xyz">
-    <div class="container text-center">
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-     
-      
-      <br><br><br><br>
-      
-    </div>  
-  </section>
+    {% include "blood/navbar.html" %}
 
-
-  <div class="jumbotron" style="margin-top: 0px;margin-bottom: 0px;">
-
-    <p class="lead text-center">“Opportunities knock the door sometimes, so don’t let it go and donate blood.”
-      </p>
+    <!-- Hero Section -->
+    <section id="hero-section" class="hero-section">
+        <div class="hero-overlay">
+            <h1 class="typewriter">Welcome to FC Blood Bank</h1>
+            <p class="typewriter-delay">Your contribution can be the difference between life and death. Join us in our mission to save lives.</p>
+        </div>
+    </section>
     
-    
-  </div>
-  {% include "blood/footer.html" %}
 
+    <!-- Mission Section -->
+    <section id="mission-section" class="content-section bg-light mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="topheading">Our Mission</h2>
+                    <p class="fs-5">At FC Blood Bank, our mission is to provide safe and timely blood to those in need. We aim to create awareness about the importance of blood donation and encourage more people to donate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- How It Works Section -->
+    <section id="how-it-works-section" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 icon-box">
+                    <i class="fas fa-heartbeat"></i>
+                    <h4>Step 1: Register</h4>
+                    <p>Sign up as a donor with FC Blood Bank and complete your profile.</p>
+                </div>
+                <div class="col-sm-12 col-md-4 icon-box">
+                    <i class="fas fa-tint"></i>
+                    <h4>Step 2: Donate Blood</h4>
+                    <p>Visit our center or participate in a blood drive near you.</p>
+                </div>
+                <div class="col-sm-12 col-md-4 icon-box">
+                    <i class="fas fa-hands-helping"></i>
+                    <h4>Step 3: Save Lives</h4>
+                    <p>Your donation is processed and made available to patients in need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials-section" class="content-section bg-light">
+        <div class="container text-center">
+            <h2 class="topheading">What Our Donors Say</h2>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"Donating blood was such a rewarding experience. FC Blood Bank made the process so easy and comfortable."</p>
+                            <footer class="blockquote-footer">Aravind</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"I am grateful to be part of this community. It's amazing to know that my donation can save a life."</p>
+                            <footer class="blockquote-footer">Nabeel</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"FC Blood Bank's staff are friendly and professional. I felt safe and well taken care of."</p>
+                            <footer class="blockquote-footer">Akhil</footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta-section" class="content-section text-center">
+        <div class="container">
+            <h2>Ready to Make a Difference?</h2>
+            <p>Join our community of life-savers by registering as a donor today.</p>
+            <a href="/donor/donorlogin"><button >
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text"> Register Now
+                </span>
+              </button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    {% include "blood/footer.html" %}
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
